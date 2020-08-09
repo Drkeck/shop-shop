@@ -25,7 +25,8 @@ function Detail() {
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
-  const { products, cart } = state
+  const { products } = state.Main
+  const { cart } = state.Cart
 
   useEffect(() => {
     if (products.length) {

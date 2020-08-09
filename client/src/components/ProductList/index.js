@@ -9,7 +9,7 @@ import spinner from "../../assets/spinner.gif"
 
 function ProductList() {
   const state = useSelector((state) => {
-    return state
+    return state.Main
   });
   const dispatch = useDispatch();
   const { currentCategory } = state;

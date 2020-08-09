@@ -13,7 +13,7 @@ const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx')
 
 const Cart = () => {
     const state = useSelector((state) => {
-        return state
+        return state.Cart
     });
 
     const dispatch = useDispatch();

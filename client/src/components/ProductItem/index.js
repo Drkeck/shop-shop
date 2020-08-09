@@ -6,7 +6,7 @@ import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 
 function ProductItem(item) {
   const state = useSelector((state) => {
-    return state;
+    return state.Cart;
   })
   const dispatch = useDispatch();
 

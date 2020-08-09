@@ -4,7 +4,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import { reducer } from './utils/reducers'
+import reducers from './utils/reducers/index'
 
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
@@ -15,7 +15,7 @@ import Nav from "./components/Nav";
 import OrderHistory from "./pages/OrderHistory";
 import Success from "./pages/Success";
 
-const Shop = createStore(reducer)
+const Shop = createStore(reducers)
 
 const client = new ApolloClient({
   request: (operation) => {
