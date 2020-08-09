@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 import { Provider } from 'react-redux'
-import Shop from './redux/shop'
+import { createStore } from 'redux'
+import { reducer } from './utils/reducers'
 
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
@@ -13,6 +14,8 @@ import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
 import OrderHistory from "./pages/OrderHistory";
 import Success from "./pages/Success";
+
+const Shop = createStore(reducer)
 
 const client = new ApolloClient({
   request: (operation) => {
