@@ -1,4 +1,3 @@
-import { useReducer } from 'react'
 import {
     UPDATE_PRODUCTS,
     UPDATE_CURRENT_CATEGORY,
@@ -11,8 +10,16 @@ import {
     TOGGLE_CART
 } from '../utils/actions';
 
+const defaultState = {
+    products:[],
+    cart: [],
+    cartOpen: false,
+    categories: [],
+    currentCategory: '',
+}
 
-export const reducer = (state, action) => {
+
+export const reducer = (state=defaultState , action) => {
     switch(action.type) {
         case UPDATE_PRODUCTS:
             return {
@@ -76,6 +83,4 @@ export const reducer = (state, action) => {
     }
 }
 
-export function useProductReducer(initalState) {
-    return useReducer(reducer, initalState);
-}
+export default reducer;
